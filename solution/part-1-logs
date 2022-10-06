@@ -1,0 +1,12 @@
+]0;@e89096af8ff4:/csvserver[root@e89096af8ff4 csvserver]# ls
+csvserver
+]0;@e89096af8ff4:/csvserver[root@e89096af8ff4 csvserver]# cat > gencsv.sh
+#!/bin/bash
+if [ -f "inputFile" ]; then
+  rm -rf inputFile
+fi
+for ((i=0 ; i < $1 ; i++))
+do
+   echo "$i, $RANDOM" >> inputFile
+done
+
