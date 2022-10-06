@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  csvserver:
+    build: .
+    ports:
+      - "9393:9300"
